@@ -1,0 +1,38 @@
+{
+  "name": "StockPortfolio",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string"
+    },
+    "symbol": {
+      "type": "string",
+      "description": "Stock ticker symbol"
+    },
+    "company_name": {
+      "type": "string",
+      "description": "Company name"
+    },
+    "shares": {
+      "type": "number",
+      "description": "Number of shares"
+    },
+    "buy_price": {
+      "type": "number",
+      "description": "Average buy price per share"
+    },
+    "current_price": {
+      "type": "number",
+      "description": "Current price per share"
+    },
+    "sector": {
+      "type": "string",
+      "description": "Industry sector"
+    }
+  },
+  "required": [
+    "symbol",
+    "shares",
+    "buy_price"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "name": "SavingsGoal",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "description": "Goal name"
+    },
+    "target_amount": {
+      "type": "number",
+      "description": "Target savings amount"
+    },
+    "current_amount": {
+      "type": "number",
+      "default": 0,
+      "description": "Current amount saved"
+    },
+    "deadline": {
+      "type": "string",
+      "format": "date",
+      "description": "Target date"
+    },
+    "icon": {
+      "type": "string",
+      "description": "Goal icon/emoji"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "completed",
+        "paused"
+      ],
+      "default": "active"
+    }
+  },
+  "required": [
+    "title",
+    "target_amount"
+  ]
+}

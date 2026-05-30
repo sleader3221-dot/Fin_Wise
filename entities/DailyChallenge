@@ -1,0 +1,39 @@
+{
+  "name": "DailyChallenge",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Challenge title"
+    },
+    "description": {
+      "type": "string",
+      "description": "What the user needs to do"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "quiz",
+        "simulation",
+        "reading",
+        "budgeting",
+        "savings"
+      ],
+      "description": "Type of challenge"
+    },
+    "xp_reward": {
+      "type": "number",
+      "default": 25,
+      "description": "XP for completion"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date for this challenge"
+    }
+  },
+  "required": [
+    "title",
+    "type"
+  ]
+}

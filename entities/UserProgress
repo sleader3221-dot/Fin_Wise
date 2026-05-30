@@ -1,0 +1,69 @@
+{
+  "name": "UserProgress",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string",
+      "description": "Reference to the user"
+    },
+    "xp_points": {
+      "type": "number",
+      "default": 0,
+      "description": "Total experience points earned"
+    },
+    "level": {
+      "type": "number",
+      "default": 1,
+      "description": "Current level"
+    },
+    "streak_days": {
+      "type": "number",
+      "default": 0,
+      "description": "Current daily streak"
+    },
+    "last_activity_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Last date of activity"
+    },
+    "completed_lessons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "IDs of completed lessons"
+    },
+    "completed_quizzes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "IDs of completed quizzes"
+    },
+    "badges": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Earned badge IDs"
+    },
+    "financial_health_score": {
+      "type": "number",
+      "default": 50,
+      "description": "Overall financial health score 0-100"
+    },
+    "total_savings_simulated": {
+      "type": "number",
+      "default": 0,
+      "description": "Total savings in simulation"
+    },
+    "total_invested_simulated": {
+      "type": "number",
+      "default": 0,
+      "description": "Total invested in paper trading"
+    }
+  },
+  "required": [
+    "user_id"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "name": "Quiz",
+  "type": "object",
+  "properties": {
+    "lesson_id": {
+      "type": "string",
+      "description": "Associated lesson ID"
+    },
+    "title": {
+      "type": "string",
+      "description": "Quiz title"
+    },
+    "questions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "question": {
+            "type": "string"
+          },
+          "options": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "correct_index": {
+            "type": "number"
+          },
+          "explanation": {
+            "type": "string"
+          }
+        }
+      },
+      "description": "Quiz questions"
+    },
+    "xp_reward": {
+      "type": "number",
+      "default": 100,
+      "description": "XP for passing"
+    },
+    "passing_score": {
+      "type": "number",
+      "default": 70,
+      "description": "Minimum passing percentage"
+    }
+  },
+  "required": [
+    "title"
+  ]
+}

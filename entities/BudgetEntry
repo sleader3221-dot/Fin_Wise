@@ -1,0 +1,52 @@
+{
+  "name": "BudgetEntry",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "income",
+        "expense"
+      ],
+      "description": "Income or expense"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "allowance",
+        "part_time_job",
+        "gifts",
+        "food",
+        "entertainment",
+        "clothing",
+        "transportation",
+        "education",
+        "savings",
+        "subscriptions",
+        "other"
+      ],
+      "description": "Category of the entry"
+    },
+    "amount": {
+      "type": "number",
+      "description": "Amount in dollars"
+    },
+    "description": {
+      "type": "string",
+      "description": "Brief description"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of the entry"
+    }
+  },
+  "required": [
+    "type",
+    "category",
+    "amount"
+  ]
+}

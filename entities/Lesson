@@ -1,0 +1,63 @@
+{
+  "name": "Lesson",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Lesson title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Brief description"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "budgeting",
+        "saving",
+        "investing",
+        "credit",
+        "taxes",
+        "banking",
+        "insurance",
+        "retirement"
+      ],
+      "description": "Lesson category"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "beginner",
+        "intermediate",
+        "advanced"
+      ],
+      "description": "Difficulty level"
+    },
+    "content": {
+      "type": "string",
+      "description": "Full lesson content in markdown"
+    },
+    "xp_reward": {
+      "type": "number",
+      "default": 50,
+      "description": "XP earned on completion"
+    },
+    "order": {
+      "type": "number",
+      "description": "Display order in category"
+    },
+    "estimated_minutes": {
+      "type": "number",
+      "description": "Estimated completion time"
+    },
+    "icon": {
+      "type": "string",
+      "description": "Icon name for the lesson"
+    }
+  },
+  "required": [
+    "title",
+    "category",
+    "difficulty"
+  ]
+}

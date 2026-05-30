@@ -1,0 +1,45 @@
+{
+  "name": "ForumPost",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string"
+    },
+    "user_name": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "description": "Post title"
+    },
+    "content": {
+      "type": "string",
+      "description": "Post content"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "general",
+        "budgeting",
+        "investing",
+        "saving",
+        "tips",
+        "questions"
+      ],
+      "description": "Forum category"
+    },
+    "likes": {
+      "type": "number",
+      "default": 0
+    },
+    "replies_count": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "title",
+    "content",
+    "category"
+  ]
+}
