@@ -1,0 +1,22 @@
+{
+  "name": "shieldnet-blockchain",
+  "version": "1.0.0",
+  "description": "ShieldNet Blockchain Layer - AI-Powered Decentralized Cybersecurity & Fintech Intelligence Platform",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy": "hardhat run scripts/deploy.js --network",
+    "coverage": "hardhat coverage",
+    "verify": "hardhat verify --network"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.5",
+    "hardhat-gas-reporter": "^2.1.1",
+    "solidity-coverage": "^0.8.12"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2",
+    "dotenv": "^16.4.5"
+  }
+}
